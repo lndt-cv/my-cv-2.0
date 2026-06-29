@@ -1,0 +1,297 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:500);
+
+body {
+  /*background: #33cc99;*/
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, #6faef7 0.1%, #4a89dc 94.2%);
+}
+
+.c {
+  text-align: center;
+  display: block;
+  position: relative;
+  width: min(90%, 800px);
+  margin: 0 auto;
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+._404 {
+  font-size: clamp(8rem, 15vw, 12rem);
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+  height: auto;
+  letter-spacing: clamp(0.5rem, 1vw, 2rem);
+}
+
+._1 {
+  text-align: center;
+  display: block;
+  position: relative;
+  letter-spacing: clamp(0.2em, 0.5em, 0.8em);
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  line-height: 1.2;
+}
+
+._2 {
+  text-align: center;
+  display: block;
+  position: relative;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  margin-top: 1rem;
+}
+
+.text {
+  font-size: clamp(1.5rem, 6vw, 3rem);
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  margin: clamp(1rem, 2vh, 2rem) 0;
+  z-index: 3;
+  width: 100%;
+  line-height: 1.2em;
+}
+
+.btn {
+  background-color: #fff;
+  position: relative;
+  display: inline-block;
+  width: min(80%, 360px);
+  padding: clamp(0.5rem, 1vw, 1rem);
+  z-index: 5;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  margin: clamp(1rem, 2vh, 2rem) auto 0;
+  color: #33cc99;
+  text-decoration: none;
+  border-radius: 5px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.right {
+  float: right;
+  width: min(60%, 400px);
+}
+
+hr {
+  padding: 0;
+  border: none;
+  border-top: clamp(3px, 0.5vw, 5px) solid #fff;
+  color: #fff;
+  text-align: center;
+  margin: clamp(1rem, 2vh, 2rem) auto;
+  width: min(80%, 420px);
+  height: clamp(5px, 1vh, 10px);
+  z-index: -10;
+}
+
+.wrapper-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.cloud {
+  width: 350px;
+  height: 120px;
+  background: #fff;
+  border-radius: 100px;
+  position: fixed;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: ease 1s;
+}
+
+.cloud:after,
+.cloud:before {
+  content: '';
+  position: absolute;
+  background: #fff;
+  z-index: -1;
+}
+
+.cloud:after {
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  left: 50px;
+  border-radius: 100px;
+}
+
+.cloud:before {
+  width: 180px;
+  height: 180px;
+  top: -90px;
+  right: 50px;
+  border-radius: 200px;
+}
+
+.x1,
+.x1_5,
+.x2,
+.x3,
+.x4,
+.x5 {
+  position: fixed;
+  background: #fff;
+  border-radius: 100px;
+  animation: moveclouds linear infinite;
+}
+
+.x1 {
+  top: 20%;
+  left: -10%;
+  transform: scale(0.3);
+  opacity: 0.9;
+  animation-duration: 25s;
+}
+
+.x1_5 {
+  top: 15%;
+  left: 10%;
+  transform: scale(0.3);
+  animation-duration: 27s;
+}
+
+.x2 {
+  left: 20%;
+  top: 30%;
+  transform: scale(0.6);
+  opacity: 0.6;
+  animation-duration: 35s;
+}
+
+.x3 {
+  left: 30%;
+  bottom: 30%;
+  transform: scale(0.6);
+  opacity: 0.8;
+  animation-duration: 35s;
+}
+
+.x4 {
+  left: 40%;
+  bottom: 20%;
+  transform: scale(0.75);
+  opacity: 0.75;
+  animation-duration: 28s;
+}
+
+.x5 {
+  left: 10%;
+  top: 50%;
+  transform: scale(0.5);
+  opacity: 0.8;
+  animation-duration: 30s;
+}
+
+@keyframes moveclouds {
+  0% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: -100%;
+  }
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .c {
+    padding: 0.5rem;
+  }
+
+  ._404 {
+    font-size: clamp(6rem, 25vw, 8rem);
+    letter-spacing: 4px;
+  }
+
+  ._1 {
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    letter-spacing: 0.2em;
+  }
+
+  ._2 {
+    font-size: clamp(0.875rem, 1vw, 1rem);
+  }
+
+  .btn {
+    font-size: clamp(0.875rem, 1.2vw, 1.2rem);
+    width: 90%;
+  }
+
+  .x1 {
+    animation-duration: 15s;
+  }
+  .x1_5 {
+    animation-duration: 17s;
+  }
+  .x2 {
+    animation-duration: 20s;
+  }
+  .x3 {
+    animation-duration: 20s;
+  }
+  .x4 {
+    animation-duration: 18s;
+  }
+  .x5 {
+    animation-duration: 19s;
+  }
+}
+
+@media (max-width: 480px) {
+  .c {
+    padding: 0.25rem;
+  }
+
+  ._404 {
+    font-size: clamp(4rem, 20vw, 6rem);
+  }
+
+  .text {
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+  }
+
+  .btn {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .c {
+    max-width: 1000px;
+  }
+
+  ._404 {
+    font-size: 12rem;
+  }
+
+  .text {
+    font-size: 3rem;
+  }
+}
